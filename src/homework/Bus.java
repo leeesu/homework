@@ -10,7 +10,7 @@ public class Bus extends Transport{
     public Bus(String carNo, int fuel, int speed, int speedChange, int maxPassenger, int fare,
                boolean status, int passenger) {
         super(carNo, fuel, speed, speedChange, maxPassenger, fare, status);
-        this.passenger = passenger; //현재승객
+        this.passenger = 0; //현재승객
         this.maxPassenger = 30;
         this.status = true;
         this.fuel = 100;
@@ -59,7 +59,8 @@ public class Bus extends Transport{
             System.out.println("현재 승객은" +this.passenger+"입니다.");;
         }else if(this.status = true && this.passenger + passenger > this.maxPassenger) {
             this.passenger = 30;
-            System.out.println("최대 승객" + this.maxPassenger + "초과하여 더이상의 승객을 태우는 것이 불가능합니다.");
+            this.maxPassenger = 30;
+            System.out.println("최대 승객 " + this.maxPassenger + "명을 초과하여 더이상의 승객을 태우는 것이 불가능합니다.");
         }else if(status == false) {
             System.out.println("차고지로 이동합니다.");
 

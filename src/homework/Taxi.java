@@ -29,6 +29,10 @@ public class Taxi extends Transport {
 
     }
 
+    public Taxi(String carNo) {
+        this.carNo = carNo;
+    }
+
 
     @Override
     public void run() {
