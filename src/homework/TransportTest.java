@@ -1,21 +1,19 @@
 package homework;
 
+import java.util.UUID;
+
 public class TransportTest {
 
     public static void main(String[] args) {
 
-        Bus bus01 = new Bus("1000");
-        bus01.run();
-        bus01.speedUpdate(40); //속도 조절
-        bus01.passengerUpdate(1); //
-        bus01.statusUpdate(0);
 
+        Bus bus100 = new Bus();
+        bus100.setCarNo("100");
+        bus100.setFuel(-40);
+        bus100.run();
+        bus100.passengerUpdate(30);
 
-        Taxi taxi01 = new Taxi("1652");
-        taxi01.run();
-        taxi01.statusUpdate(0);
-        taxi01.speedUpdate(40);
-        taxi01.passengerUpdate(10);
-
+        Taxi taxi100 = new Taxi();
+        taxi100.run();
     }
 }
